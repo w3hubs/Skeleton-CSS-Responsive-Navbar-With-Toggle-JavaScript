@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Skeleton CSS: Responsive Navbar With Toggle JavaScript</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+    <style type="text/css">
+      body{
+      margin: 0;
+      padding: 0;
+      font-family: 'Nunito', sans-serif;
+      }
+      h5{
+      margin: 0;
+      line-height: 2;
+      font-size: 24px;
+      color: #fff;
+      }
+      ul{
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      }
+      li{
+      padding: 10px 25px;
+      margin: 0;
+      }
+      a,a:hover{
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      }
+
+      .fa{
+      display: none;
+      }
+      .navbar{
+      background: #1C8D73;
+      padding: 10px 25px;
+      }
+      @media(max-width: 768px){
+            .two.columns,.ten.columns{
+                  width: 100%;
+            }
+      ul{
+      flex-wrap: wrap;
+      text-align: center;
+      }
+      .logo{
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    
+      }
+      li{
+      width: 100%;
+      padding: 10px 15px;
+      }
+      #mobMenu{
+      display: none;
+      transition: .2s;
+      }
+      .fa{
+      display: block;
+      font-size: 30px;
+      position: absolute;
+      top: 0;
+      right: 10px;
+      margin: 15px;
+      color: #fff;
+      cursor: pointer;
+      }
+      h5{
+      text-align: center;
+      }
+      .navbar{
+      padding: 0;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="row">
+        <div class="two columns">
+          <div class="logo">
+            <h5>W3hubs</h5>
+          </div>
+          <i class="fa fa-bars" onclick="myFunction()"></i>
+        </div>
+        <div class="ten columns">
+          <div id="mobMenu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function myFunction() {
+        var mobMenu = document.getElementById("mobMenu");
+        if (mobMenu.style.display === "block") {
+          mobMenu.style.display = "none";
+        } else {
+          mobMenu.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
